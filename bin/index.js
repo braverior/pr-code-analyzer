@@ -24,6 +24,8 @@ program
   .option("-o, --output <output>", "output folder", "")
   .option("-v, --verbose", "enable verbose logging")
   .option("--lang <language>", "output language (zh/en)", "zh")
+  .option("-f, --format <format>", "output format (txt/html/both)", "html")
+  .option("--no-open", "disable auto open HTML report in browser")
   .action(async (options) => {
     try {
       // Validate: must specify either --branch or --local

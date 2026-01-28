@@ -27,3 +27,35 @@
 2026-01-28T04:05:23.094Z [32minfo[39m: Structured changes saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-eVEy61/pr_changes_for_llm.txt
 2026-01-28T04:05:23.094Z [32minfo[39m: Sending structured diff to LLM for review...
 2026-01-28T04:05:30.679Z [32minfo[39m: Review saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-eVEy61/output_review.txt
+2026-01-28T04:29:05.063Z [32minfo[39m: Running in local mode - reviewing uncommitted changes
+2026-01-28T04:29:05.064Z [32minfo[39m: Generating diff for uncommitted local changes...
+2026-01-28T04:29:05.091Z [32minfo[39m: Diff saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-1Smyjk/pr_diff.txt
+2026-01-28T04:29:05.091Z [32minfo[39m: Current file: bin/index.js
+2026-01-28T04:29:05.091Z [32minfo[39m: Current file: package.json
+2026-01-28T04:29:05.092Z [32minfo[39m: Current file: src/LLMAdapter.js
+2026-01-28T04:29:05.092Z [32minfo[39m: Current file: src/PRMain.js
+2026-01-28T04:29:05.092Z [32minfo[39m: Structured changes saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-1Smyjk/pr_changes_for_llm.txt
+2026-01-28T04:29:05.092Z [32minfo[39m: Sending structured diff to LLM for review...
+2026-01-28T04:29:12.054Z [32minfo[39m: HTML report saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-1Smyjk/output_review.html
+2026-01-28T04:29:40.718Z [32minfo[39m: Running in local mode - reviewing uncommitted changes
+2026-01-28T04:29:40.720Z [32minfo[39m: Generating diff for uncommitted local changes...
+2026-01-28T04:29:40.823Z [32minfo[39m: Diff saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-Qfj1Wl/pr_diff.txt
+2026-01-28T04:29:40.823Z [32minfo[39m: Current file: bin/index.js
+2026-01-28T04:29:40.823Z [32minfo[39m: Current file: combined.log
+2026-01-28T04:29:40.823Z [32minfo[39m: Current file: package.json
+2026-01-28T04:29:40.824Z [32minfo[39m: Current file: src/LLMAdapter.js
+2026-01-28T04:29:40.824Z [32minfo[39m: Current file: src/PRMain.js
+2026-01-28T04:29:40.824Z [32minfo[39m: Structured changes saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-Qfj1Wl/pr_changes_for_llm.txt
+2026-01-28T04:29:40.824Z [32minfo[39m: Sending structured diff to LLM for review...
+2026-01-28T04:29:50.492Z [32minfo[39m: HTML report saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-Qfj1Wl/output_review.html
+2026-01-28T05:07:16.654Z [32minfo[39m: Running in local mode - reviewing uncommitted changes
+2026-01-28T05:07:16.655Z [32minfo[39m: Generating diff for uncommitted local changes...
+2026-01-28T05:07:16.690Z [32minfo[39m: Diff saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-jmWYTC/pr_diff.txt
+2026-01-28T05:07:16.690Z [32minfo[39m: Current file: bin/index.js
+2026-01-28T05:07:16.690Z [32minfo[39m: Current file: combined.log
+2026-01-28T05:07:16.690Z [32minfo[39m: Current file: package.json
+2026-01-28T05:07:16.691Z [32minfo[39m: Current file: src/LLMAdapter.js
+2026-01-28T05:07:16.691Z [32minfo[39m: Current file: src/PRMain.js
+2026-01-28T05:07:16.691Z [32minfo[39m: Structured changes saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-jmWYTC/pr_changes_for_llm.txt
+2026-01-28T05:07:16.692Z [32minfo[39m: Sending structured diff to LLM for review...
+2026-01-28T05:07:24.867Z [32minfo[39m: HTML report saved to /Users/huanglele/.pr-reviewer/pr-code-analyzer_2026-01-28T05-07-16/output_review.html

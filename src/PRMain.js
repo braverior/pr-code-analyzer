@@ -14,10 +14,28 @@ module.exports = class PRReviewer {
     this.mode = options.mode;
     this.targetBranch = options.targetBranch;
     this.language = options.lang || "zh";
+    this.format = options.format || "html";
+    this.openBrowser = options.open !== false;
+
+    // Temporary directory for intermediate files (will be cleaned up)
     this.tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), "pr_diff-"));
-    this.outputFolder = options.output ? options.output : this.tmpDir;
     this.diffFile = path.join(this.tmpDir, "pr_diff.txt");
     this.outputFile = path.join(this.tmpDir, "pr_changes_for_llm.txt");
+
+    // Output folder for final reports (NOT cleaned up)
+    if (options.output) {
+      this.outputFolder = options.output;
+    } else {
+      // Default: ~/.pr-reviewer/{project}_{timestamp}
+      const projectName = path.basename(process.cwd());
+      const timestamp = new Date().toISOString().replace(/[:.]/g, "-").slice(0, 19);
+      const folderName = `${projectName}_${timestamp}`;
+      const defaultDir = path.join(os.homedir(), ".pr-reviewer", folderName);
+      if (!fs.existsSync(defaultDir)) {
+        fs.mkdirSync(defaultDir, { recursive: true });
+      }
+      this.outputFolder = defaultDir;
+    }
   }
 
   async run() {
@@ -55,6 +73,9 @@ module.exports = class PRReviewer {
         this.mode,
         this.outputFolder,
         this.language,
+        this.format,
+        this.openBrowser,
+        { branchName: this.branchName || "local" },
       );
       logger.info(`Review saved to ${reviewFilePath}`);
 
