@@ -6,6 +6,11 @@ const OpenAI = require("openai");
 const logger = require("./logger");
 const { PROMPTS } = require("../MODE_FOR_PROMPT");
 
+const LANGUAGE_INSTRUCTIONS = {
+  zh: "请用中文回复。",
+  en: "Please respond in English.",
+};
+
 /**
  * LLMService class for interacting with OpenAI's GPT-4o-mini model
  */
@@ -26,10 +31,12 @@ module.exports = class LLMService {
    * Processes the changes and generates a review or brief
    * @param {string} changesFilePath - Path to the changes file
    * @param {string} mode - Review mode (default: "review")
+   * @param {string} outputFolder - Output folder path
+   * @param {string} language - Output language (default: "zh")
    * @returns {Promise<string>} - Path to the output file
    * @throws {Error} - If file reading or writing fails
    */
-  async processChanges(changesFilePath, mode = "review", outputFolder = null) {
+  async processChanges(changesFilePath, mode = "review", outputFolder = null, language = "zh") {
     try {
       // Ensure file exists and read it
       await fs
@@ -43,11 +50,15 @@ module.exports = class LLMService {
         throw new Error(`Invalid mode: ${mode}`);
       }
 
+      // Build system prompt with language instruction
+      const langInstruction = LANGUAGE_INSTRUCTIONS[language] || LANGUAGE_INSTRUCTIONS.zh;
+      const systemPrompt = `${PROMPTS[mode]}\n\n${langInstruction}`;
+
       // Get LLM response
       const response = await this.client.chat.completions.create({
         model: "gpt-4o-mini",
         messages: [
-          { role: "system", content: PROMPTS[mode] },
+          { role: "system", content: systemPrompt },
           { role: "user", content: changes },
         ],
       });

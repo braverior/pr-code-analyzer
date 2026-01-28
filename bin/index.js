@@ -13,7 +13,8 @@ program
   .name("pr-reviewer")
   .description("CLI tool for automated PR reviews using LLM")
   .version(version)
-  .requiredOption("-b, --branch <branch>", "branch name to review")
+  .option("-b, --branch <branch>", "branch name to review")
+  .option("-l, --local", "review uncommitted local changes (git diff HEAD)")
   .option("-m, --mode <mode>", "review mode (review/description)", "review")
   .option(
     "-t, --target-branch <branch>",
@@ -22,8 +23,20 @@ program
   )
   .option("-o, --output <output>", "output folder", "")
   .option("-v, --verbose", "enable verbose logging")
+  .option("--lang <language>", "output language (zh/en)", "zh")
   .action(async (options) => {
     try {
+      // Validate: must specify either --branch or --local
+      if (!options.branch && !options.local) {
+        logger.error("Error: must specify either --branch or --local");
+        process.exit(1);
+      }
+
+      if (options.branch && options.local) {
+        logger.error("Error: --branch and --local are mutually exclusive");
+        process.exit(1);
+      }
+
       if (options.verbose) {
         logger.level = "debug";
       }

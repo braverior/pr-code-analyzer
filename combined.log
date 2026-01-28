@@ -1,0 +1,29 @@
+2026-01-28T04:01:34.457Z [32minfo[39m: Running in local mode - reviewing uncommitted changes
+2026-01-28T04:01:34.458Z [32minfo[39m: Generating diff for uncommitted local changes...
+2026-01-28T04:01:34.482Z [32minfo[39m: Diff saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-Hfhs4R/pr_diff.txt
+2026-01-28T04:01:34.483Z [32minfo[39m: Current file: bin/index.js
+2026-01-28T04:01:34.483Z [32minfo[39m: Current file: src/GitOperator.js
+2026-01-28T04:01:34.483Z [32minfo[39m: Current file: src/PRMain.js
+2026-01-28T04:01:34.483Z [32minfo[39m: Structured changes saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-Hfhs4R/pr_changes_for_llm.txt
+2026-01-28T04:01:34.483Z [32minfo[39m: Sending structured diff to LLM for review...
+2026-01-28T04:01:45.136Z [32minfo[39m: Review saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-Hfhs4R/output_review.txt
+2026-01-28T04:02:01.766Z [32minfo[39m: Running in local mode - reviewing uncommitted changes
+2026-01-28T04:02:01.767Z [32minfo[39m: Generating diff for uncommitted local changes...
+2026-01-28T04:02:01.783Z [32minfo[39m: Diff saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-9ykU7N/pr_diff.txt
+2026-01-28T04:02:01.783Z [32minfo[39m: Current file: bin/index.js
+2026-01-28T04:02:01.783Z [32minfo[39m: Current file: combined.log
+2026-01-28T04:02:01.783Z [32minfo[39m: Current file: src/GitOperator.js
+2026-01-28T04:02:01.783Z [32minfo[39m: Current file: src/PRMain.js
+2026-01-28T04:02:01.784Z [32minfo[39m: Structured changes saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-9ykU7N/pr_changes_for_llm.txt
+2026-01-28T04:02:01.784Z [32minfo[39m: Sending structured diff to LLM for review...
+2026-01-28T04:05:23.077Z [32minfo[39m: Running in local mode - reviewing uncommitted changes
+2026-01-28T04:05:23.078Z [32minfo[39m: Generating diff for uncommitted local changes...
+2026-01-28T04:05:23.093Z [32minfo[39m: Diff saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-eVEy61/pr_diff.txt
+2026-01-28T04:05:23.094Z [32minfo[39m: Current file: bin/index.js
+2026-01-28T04:05:23.094Z [32minfo[39m: Current file: combined.log
+2026-01-28T04:05:23.094Z [32minfo[39m: Current file: src/GitOperator.js
+2026-01-28T04:05:23.094Z [32minfo[39m: Current file: src/LLMAdapter.js
+2026-01-28T04:05:23.094Z [32minfo[39m: Current file: src/PRMain.js
+2026-01-28T04:05:23.094Z [32minfo[39m: Structured changes saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-eVEy61/pr_changes_for_llm.txt
+2026-01-28T04:05:23.094Z [32minfo[39m: Sending structured diff to LLM for review...
+2026-01-28T04:05:30.679Z [32minfo[39m: Review saved to /var/folders/jy/tf4w2c416wl3f07ht39hl1jr0000gn/T/pr_diff-eVEy61/output_review.txt

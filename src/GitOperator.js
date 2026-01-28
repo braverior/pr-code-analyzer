@@ -45,4 +45,14 @@ module.exports = class GitOperator {
     logger.info(`Generating diff against ${targetBranch}...`);
     return this.executeGitCommand(`git diff origin/${targetBranch}...HEAD`);
   }
+
+  /**
+   * Generates diff for uncommitted local changes
+   * Includes both staged and unstaged changes
+   * @returns {string} - Diff output
+   */
+  static generateLocalDiff() {
+    logger.info("Generating diff for uncommitted local changes...");
+    return this.executeGitCommand("git diff HEAD");
+  }
 };
